@@ -38,8 +38,37 @@ body {
   overflow-x: hidden;
   background-color: var(--bg-color);
   color: var(--text-color);
+  /* Removed transition on body/html for background checks during scroll - can be performance heavy, but okay for small sites */
   transition: background-color 0.3s, color 0.3s;
 }
+
+/* Scroll Reveal Animation Styles */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Enhanced Typography */
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
 
 header {
   position: fixed;
@@ -166,6 +195,10 @@ header {
 
 .home-text p {
   margin-bottom: 2rem;
+  font-size: 1.2rem;
+  /* Increased specific visibility */
+  font-weight: 500;
+  /* Added weight */
 }
 
 /* ===== BUTTON ===== */
@@ -436,9 +469,10 @@ header {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  padding: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Better responsiveness */
+  gap: 30px;
+  padding: 30px 10px;
 }
 
 .project-card {
@@ -498,7 +532,39 @@ header {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
   background: linear-gradient(135deg, #fff, #ccc);
+  /* Lighten on hover */
 }
+
+/* Tools Styling Enhancement */
+.list-tools a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* Increased gap */
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  background: #2b2b2b;
+  /* Slightly lighter than #222 */
+  padding: 18px 25px;
+  /* Bigger padding */
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  /* Larger Text */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* Bouncy effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.list-tools a:hover {
+  background: white;
+  color: #000;
+  transform: translateY(-8px) scale(1.05);
+  /* Increased movement */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
 
 .contact {
   padding: 100px 10%;

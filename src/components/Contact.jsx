@@ -34,7 +34,7 @@ const Contact = () => {
                     </div>
                     <form className="contact-form" action="https://formsubmit.co/rumaanmoqthar07@gmail.com" method="POST">
                         <input type="hidden" name="_captcha" value="false" />
-                        <input type="hidden" name="_next" value="http://localhost:5173/" /> {/* Redirect back after submit */}
+                        <input type="hidden" name="_next" value="https://rumaanmoqthar.vercel.app/" /> {/* Redirect back after submit */}
                         <div className="form-group">
                             <input type="text" name="name" placeholder="Your Name" required />
                         </div>
