@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaNodeJs, FaGit, FaGithub } from 'react-icons/fa';
+import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaNodeJs, FaGit, FaGithub, FaJava, FaPython } from 'react-icons/fa';
 
 const Projects = () => {
     return (
@@ -16,6 +16,8 @@ const Projects = () => {
                     <li><a href="#"><FaHtml5 /> HTML5</a></li>
                     <li><a href="#"><FaCss3Alt /> CSS3</a></li>
                     <li><a href="#">Tailwind CSS</a></li>
+                    <li><a href="#"><FaJava /> Java</a></li>
+                    <li><a href="#"><FaPython /> Python</a></li>
                     <li><a href="#">C#</a></li>
                     <li><a href="#">ASP.NET</a></li>
                     <li><a href="#"><FaNodeJs /> Node.js</a></li>
