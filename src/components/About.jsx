@@ -42,16 +42,30 @@ const About = () => {
                     <p>Highly motivated Full-Stack Developer with experience in building and deploying scalable, full-stack web applications. Proficient in both MERN and C#/.NET stacks, component-based UI architecture, developing RESTful APIs, and managing both SQL and NoSQL databases. A quick learner with strong problem-solving and debugging skills, eager to contribute to a professional, product-based environment.</p>
                     <p>Experience building responsive React.js applications and modern user interfaces using Tailwind CSS and component-based architecture.</p>
 
-                    <p>TECHNICAL SKILLS:</p>
-                    <p><span>#</span>Full-Stack Development: MERN Stack (MongoDB, Express.js, React, Node.js), C#, ASP.NET</p>
-                    <p><span>#</span>Frontend Technologies : React.js, JavaScript (ES6+), HTML5, CSS3, Component-based Architecture</p>
-                    <p><span>#</span>Backend Technologies : Node.js, Express.js, RESTful Services, API Development</p>
-                    <p><span>#</span>Databases : SQL, NoSQL (MongoDB)</p>
-                    <p><span>#</span>Styling & Design : Tailwind CSS, ShadCN UI Components, Responsive Web Design, Modern CSS</p>
-                    <p><span>#</span>User Experience : Interactive UI Development, Mobile-First Design, Cross-browser Compatibility</p>
-                    <p><span>#</span>State Management : React Hooks, Component State, Props Management</p>
-                    <p><span>#</span>Development Tools : Git, GitHub, VS Code, Browser DevTools, Live Development Servers</p>
-                    <p><span>#</span>Integration : API Integration, Frontend-Backend Communication, RESTful Services</p>
+                    <h3>Technical Skills</h3>
+
+                    <div className="skills-container">
+                        <div className="skill-category">
+                            <strong>Full-Stack:</strong>
+                            <span>MERN Stack</span> <span>C# / ASP.NET</span>
+                        </div>
+                        <div className="skill-category">
+                            <strong>Frontend:</strong>
+                            <span>React.js</span> <span>JavaScript (ES6+)</span> <span>Tailwind CSS</span> <span>HTML5/CSS3</span>
+                        </div>
+                        <div className="skill-category">
+                            <strong>Backend:</strong>
+                            <span>Node.js</span> <span>Express.js</span> <span>RESTful APIs</span>
+                        </div>
+                        <div className="skill-category">
+                            <strong>Database:</strong>
+                            <span>MongoDB</span> <span>SQL</span>
+                        </div>
+                        <div className="skill-category">
+                            <strong>Tools:</strong>
+                            <span>Git/GitHub</span> <span>VS Code</span> <span>Postman</span>
+                        </div>
+                    </div>
 
                     <div style={{ marginTop: '2rem' }}>
                         <a href="/pdfs/Resume_Rumaan.pdf" className="btn" download>
