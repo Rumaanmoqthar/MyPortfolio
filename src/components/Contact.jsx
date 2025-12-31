@@ -13,7 +13,7 @@ const Contact = () => {
                     <div className="contact-info">
                         <div className="contact-item">
                             <FaEnvelope />
-                            <p>rumaanmoqthar07@gmail.com</p>
+                            <p>rumaanmoq@gmail.com</p>
                         </div>
                         <div className="contact-item">
                             <FaPhone />
@@ -32,7 +32,7 @@ const Contact = () => {
                             <a href="https://github.com/Rumaanmoqthar" aria-label="GitHub"><FaGithub /></a>
                         </div>
                     </div>
-                    <form className="contact-form" action="https://formsubmit.co/rumaanmoqthar07@gmail.com" method="POST">
+                    <form className="contact-form" action="https://formsubmit.co/rumaanmoq@gmail.com" method="POST">
                         <input type="hidden" name="_captcha" value="false" />
                         <input type="hidden" name="_next" value="https://rumaanmoqthar.vercel.app/" /> {/* Redirect back after submit */}
                         <div className="form-group">
