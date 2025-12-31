@@ -694,89 +694,82 @@ header {
   background: linear-gradient(135deg, #ff1744, #ff5252);
 }
 
+
+/* =========================================
+   CONSOLIDATED RESPONSIVE STYLES
+   ========================================= */
+
+/* --- Tablet / iPad Landscape (max-width: 1024px) --- */
 @media (max-width: 1024px) {
+  .home {
+    padding: 2rem 3rem 0 3rem;
+  }
+
   .projects-container {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+  }
+
+  .about,
+  .project,
+  .contact {
+    padding: 80px 8%;
+    /* Reduce side padding slightly */
   }
 }
 
+/* --- Tablet Portrait / Large Mobile (max-width: 900px) --- */
 @media (max-width: 900px) {
-  .contact-content {
-    flex-direction: column;
-  }
-
   .home {
     grid-template-columns: 1fr;
-    padding: 2rem;
+    padding: 8rem 2rem 2rem;
+    /* Add top padding for fixed header */
     text-align: center;
+    gap: 3rem;
+  }
+
+  .home-text h3 {
+    padding-left: 0;
+    display: inline-block;
+  }
+
+  .home-text h3::before {
+    display: none;
+    /* Remove the line on mobile for cleaner look */
   }
 
   .home-img img {
-    width: 80%;
+    width: 70%;
+    /* Smaller image on tablet */
+    max-width: 400px;
     margin: 0 auto;
   }
 
   .about-info2 {
     flex-direction: column;
     align-items: center;
+    gap: 3rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
     gap: 2rem;
   }
-}
 
-@media (max-width: 768px) {
-  .projects-container {
-    grid-template-columns: 1fr;
-    padding: 15px;
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Hide sidebar socials on tablet/mobile */
+  .socials-icon {
+    display: none;
   }
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: var(--text-color);
-}
-
-/* Slide-in menu */
-.slide-menu {
-  position: fixed;
-  top: 0;
-  right: -260px;
-  width: 260px;
-  height: 100%;
-  background-color: var(--header-bg);
-  color: var(--text-color);
-  transition: 0.3s ease;
-  z-index: 2000;
-  padding-top: 60px;
-}
-
-.slide-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-.slide-menu ul li {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.slide-menu ul li a {
-  color: var(--text-color);
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.slide-menu ul li a:hover {
-  color: #00bfff;
-}
-
-.slide-menu.active {
-  right: 0;
-}
-
-@media screen and (max-width: 768px) {
+/* --- Mobile Landscape / Large Phones (max-width: 768px) --- */
+@media (max-width: 768px) {
 
   .header-list,
   .header-list-icon {
@@ -785,155 +778,134 @@ header {
 
   .menu-toggle {
     display: block;
+    /* Show hamburger menu */
   }
-}
 
-
-
-@media (max-width: 1024px) {
   .projects-container {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 20px;
-  }
-
-  .home {
-    padding: 2rem 3rem 0 3rem;
+    grid-template-columns: 1fr;
+    /* 1 column for projects */
+    gap: 40px;
   }
 
   .about,
   .project,
   .contact {
-    padding: 50px 5%;
+    padding: 60px 20px;
   }
-}
 
-/* ===== Tablets / iPad Portrait ===== */
-@media (max-width: 900px) {
-  .home {
-    grid-template-columns: 1fr;
-    padding: 2rem 1.5rem;
+  /* Improve About Section Layout */
+  .about-info {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
+  .info-text {
+    text-align: center;
+  }
+
+  .photo-container img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* --- Mobile Portrait / Small Phones (max-width: 480px) --- */
+@media (max-width: 480px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .home {
+    padding: 6rem 1.5rem 2rem;
+  }
+
+  .home-text h2 {
+    font-size: 2rem;
+  }
+
+  .home-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .home-text p {
+    font-size: 1rem;
+  }
+
   .home-img img {
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
   }
 
-  .socials-icon {
-    display: none;
+  .btn {
+    width: 100%;
+    /* Full width buttons on mobile */
+    justify-content: center;
+    margin-bottom: 10px;
   }
 
-  .about-info2,
-  .contact-content {
-    flex-direction: column;
-    align-items: center;
+  .about-info2 {
     gap: 2rem;
   }
 
-  .about,
-  .project,
-  .contact {
-    padding: 50px 5%;
-  }
-}
-
-/* ===== Small Tablets / Large Phones ===== */
-@media (max-width: 768px) {
-  .projects-container {
-    grid-template-columns: 1fr;
-    padding: 15px;
+  .tools {
+    padding: 20px 10px;
   }
 
-  .home {
-    padding: 1.5rem 1rem;
-  }
-
-  .socials-icon {
-    display: none;
-  }
-
-  .home-text h2 {
-    font-size: 2.2rem;
-  }
-
-  .home-text h3 {
-    font-size: 1.2rem;
-    padding-left: 3rem;
-  }
-
-  .about,
-  .project,
-  .contact {
-    padding: 50px 5%;
-  }
-
-  .photo-container img {
-    width: 200px;
-  }
-
-  .contact-form {
-    padding: 30px;
-  }
-}
-
-/* ===== Phones ===== */
-@media (max-width: 480px) {
-  header {
-    padding: 15px 10px;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .logo {
-    font-size: 18px;
-  }
-
-  .home-text h2 {
-    font-size: 1.8rem;
-  }
-
-  .home-text h3 {
-    font-size: 1rem;
-    padding-left: 1.5rem;
-  }
-
-  .home {
-    padding: 1rem 1rem 0 1rem;
-    margin: 90px 15px;
-  }
-
-  .socials-icon {
-    display: none;
-  }
-
-  .home-img img {
+  .list-tools li {
+    flex: 0 0 100%;
+    /* Full width tools */
     width: 100%;
   }
 
-  .projects-container {
-    gap: 15px;
-  }
-
-  .photo-container img {
-    width: 150px;
-  }
-
-  .about,
-  .project,
-  .contact {
-    padding: 50px 15px;
+  .list-tools a {
+    width: 100%;
   }
 
   .contact-form {
-    padding: 20px;
+    padding: 25px 20px;
   }
 
   .scroll-btn {
-    left: 5%;
-    bottom: 5%;
+    display: none;
+    /* Hide scroll button on small screens */
+  }
+
+  /* Ensure popup fits */
+  .popup-content {
+    width: 95%;
+    padding: 20px;
   }
 }
+
+/* Slide-in menu (Keep existing logic) */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2000;
+  padding-top: 80px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-toggle {
+  display: none;
+  /* Hidden on desktop */
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
 
 /* Success Popup Styles */
 .success-popup {

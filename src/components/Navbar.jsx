@@ -56,7 +56,6 @@ const Navbar = () => {
                     <li><a href="#home" className={activeLink === 'home' ? 'active' : ''}>Home</a></li>
                     <li><a href="#about" className={activeLink === 'about' ? 'active' : ''}>About</a></li>
                     <li><a href="#project" className={activeLink === 'project' ? 'active' : ''}>Projects</a></li>
-                    <li><a href="#certificates" className={activeLink === 'certificates' ? 'active' : ''}>Certificates</a></li>
                     <li><a href="#contact" className={activeLink === 'contact' ? 'active' : ''}>Contact</a></li>
                 </ul>
                 <ul className="header-list-icon">
@@ -71,7 +70,6 @@ const Navbar = () => {
                     <li><a href="#home" onClick={() => setIsOpen(false)}>Home</a></li>
                     <li><a href="#about" onClick={() => setIsOpen(false)}>About</a></li>
                     <li><a href="#project" onClick={() => setIsOpen(false)}>Projects</a></li>
-                    <li><a href="#certificates" onClick={() => setIsOpen(false)}>Certificates</a></li>
                     <li><a href="#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
                 </ul>
             </div>
