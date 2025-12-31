@@ -65,7 +65,13 @@ const Navbar = () => {
                 </ul>
             </header>
 
+            {/* Overlay */}
+            <div className={`menu-overlay ${isOpen ? 'active' : ''}`} onClick={() => setIsOpen(false)}></div>
+
             <div className={`slide-menu ${isOpen ? 'active' : ''}`} id="slide-menu">
+                <div className="menu-close-btn" onClick={() => setIsOpen(false)}>
+                    &times;
+                </div>
                 <ul>
                     <li><a href="#home" onClick={() => setIsOpen(false)}>Home</a></li>
                     <li><a href="#about" onClick={() => setIsOpen(false)}>About</a></li>

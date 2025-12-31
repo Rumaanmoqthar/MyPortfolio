@@ -877,27 +877,98 @@ header {
   }
 }
 
-/* Slide-in menu (Keep existing logic) */
+/* Slide-in menu */
 .slide-menu {
   position: fixed;
   top: 0;
-  right: -260px;
-  width: 260px;
+  right: -300px;
+  /* Hidden by default */
+  width: 280px;
+  max-width: 80%;
   height: 100%;
   background-color: var(--header-bg);
   color: var(--text-color);
-  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2001;
+  padding-top: 60px;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-menu.active {
+  right: 0;
+  /* Slide in */
+}
+
+.slide-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.slide-menu ul li {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.slide-menu ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.3rem;
+  /* Larger font */
+  padding: 10px 0;
+  display: block;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.slide-menu ul li a:hover {
+  color: var(--accent-color);
+  background: rgba(0, 0, 0, 0.03);
+  transform: translateX(5px);
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 2000;
-  padding-top: 80px;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.menu-close-btn:hover {
+  color: var(--accent-color);
 }
 
 .menu-toggle {
   display: none;
-  /* Hidden on desktop */
   font-size: 1.8rem;
   cursor: pointer;
   color: var(--text-color);
+  z-index: 2002;
+  /* Ensure above overlay? Actually overlay is 2000, menu is 2001. Toggle needs to be accessible? Toggle is usually in header which is 1000. It doesn't need to be above menu if menu has close button. */
 }
 
 @media (max-width: 768px) {
