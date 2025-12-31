@@ -42,7 +42,7 @@ const Contact = () => {
                             <input type="email" name="email" placeholder="Your Email" required />
                         </div>
                         <div className="form-group">
-                            <input type="text" name="subject" placeholder="Subject" required />
+                            <input type="text" name="_subject" placeholder="Subject" required />
                         </div>
                         <div className="form-group">
                             <textarea name="message" placeholder="Your Message" rows="6" required></textarea>

@@ -22,7 +22,8 @@ const Navbar = () => {
             let current = '';
 
             sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
+                const rect = section.getBoundingClientRect();
+                const sectionTop = rect.top + window.scrollY;
                 if (window.scrollY >= sectionTop - 150) {
                     current = section.getAttribute('id');
                 }
